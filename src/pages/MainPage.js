@@ -5,15 +5,45 @@ const MainPage = () => {
   return(
     <div>
       <Header />
-      <input type="text" placeholder="Your name" />
+      <input
+        type="text"
+        placeholder="Your name"
+        data-testid="username-input"
+        aria-label="user-name"
+      />
       <label>
         Select game Type:
-        <button>One Word</button>
-        <button>Two Words</button>
-        <button>Three Words</button>
+        <button
+          type="button"
+          aria-label="One Word"
+        >
+          One Word
+        </button>
+        <button
+          type="button"
+          aria-label="Two Words"
+        >
+          Two Words
+        </button>
+        <button
+          type="button"
+          aria-label="One Word"
+        >
+          Three Words
+        </button>
       </label>
-      <button>Start</button>
-      <button>How To Play</button>
+      <button
+        type="button"
+        aria-label="Start"
+      >
+        Start
+      </button>
+      <button
+        type="button"
+        aria-label="How to play"
+      >
+        How To Play
+      </button>
     </div>
   )
 }

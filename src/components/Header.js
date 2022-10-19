@@ -2,8 +2,13 @@ import React from 'react';
 
 const Header = () => {
   return(
-    <header>
-      <p>WITW</p>
+    <header data-testid="header">
+      <h1
+      data-testid="header-title"
+      aria-label="main-title"
+      >
+        WITW
+      </h1>
     </header>
   )
 };
