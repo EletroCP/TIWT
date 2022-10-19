@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import HowToPlay from '../components/HowToPlay';
 
 const MainPage = () => {
   return(
@@ -44,6 +45,7 @@ const MainPage = () => {
       >
         How To Play
       </button>
+      <HowToPlay />
     </div>
   )
 }
