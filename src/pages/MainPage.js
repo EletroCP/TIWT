@@ -47,7 +47,7 @@ const MainPage = () => {
       </button>
       <HowToPlay />
     </div>
-  )
-}
+  );
+};
 
 export default MainPage;
