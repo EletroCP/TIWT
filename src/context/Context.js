@@ -5,11 +5,13 @@ import PropTypes from 'prop-types';
 export const Context = createContext();
 
 function ContextProvider({ children }) {
-  const [userName, setuserName] = useState('');
+  const [userName, setUserName] = useState('');
+  const [typeGame, setTypeGame] = useState(1);
 
   const value = useMemo(() => ({
-    userName, setuserName,
-  }), [userName]);
+    userName, setUserName,
+    typeGame, setTypeGame,
+  }), [userName, typeGame]);
 
   return (
     <Context.Provider
