@@ -1,13 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-// import HowToPlay from '../components/HowToPlay';
+import HowToPlay from '../components/HowToPlay';
 import { Context } from '../context/Context';
+import '../style/mainPage.css';
 
 const MainPage = () => {
 
   const { userName, typeGame, setUserName, setTypeGame } = useContext(Context);
   const [isDisabled, setIsDisabled] = useState(true);
+  const [visible, setVisible] = useState('not-visible');
 
   return(
     <div>
@@ -66,9 +68,19 @@ const MainPage = () => {
       <button
         type="button"
         aria-label="How to play"
+        onClick={ () => {
+          setVisible(
+            visible === 'visible' ? 'not-visible' : 'visible'
+          );
+        }}
       >
         How To Play
       </button>
+      <HowToPlay
+        value={{
+          visible
+        }}
+      />
     </div>
   );
 };
