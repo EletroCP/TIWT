@@ -29,6 +29,7 @@ const MainPage = () => {
         <button
           type="button"
           aria-label="One Word"
+          data-testid="one-word-button"
           onClick={ () => setTypeGame(1) }
         >
           One Word
@@ -36,6 +37,7 @@ const MainPage = () => {
         <button
           type="button"
           aria-label="Two Words"
+          data-testid="two-word-button"
           onClick={ () => setTypeGame(2) }
         >
           Two Words
@@ -43,11 +45,14 @@ const MainPage = () => {
         <button
           type="button"
           aria-label="Three Word"
+          data-testid="three-word-button"
           onClick={ () => setTypeGame(3) }
         >
           Three Words
         </button>
-        <p>Numero de palavras selecionadas: { typeGame }</p>
+        <p data-testid="number-of-words">
+          Numero de palavras selecionadas: { typeGame }
+        </p>
       </label>
       <Link to="/game">
         <button
