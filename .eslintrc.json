@@ -28,6 +28,6 @@
         "no-var": "error",
         "max-len": ["error", 90],
         "comma-spacing": ["error", { "before": false, "after": true}],
-        "object-curly-spacing": ["error", "always"]
+        "object-curly-spacing": ["error", "ever"]
     }
 }
