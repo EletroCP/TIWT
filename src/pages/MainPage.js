@@ -68,6 +68,7 @@ const MainPage = () => {
       <button
         type="button"
         aria-label="How to play"
+        data-testid="open-htp"
         onClick={ () => {
           setVisible(
             visible === 'visible' ? 'not-visible' : 'visible'
@@ -78,7 +79,8 @@ const MainPage = () => {
       </button>
       <HowToPlay
         value={{
-          visible
+          visible,
+          setVisible
         }}
       />
     </div>
