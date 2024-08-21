@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import React, { useContext } from 'react';
 import MainPage from '../pages/MainPage';
@@ -20,13 +21,18 @@ describe('Testes da pagina inicial da aplicação', () => {
     const title = screen.getByRole('heading', { level: 1 });
     expect(title).toBeVisible;
     expect(title).toHaveTextContent;
-  })
+  });
+
+  it('O texto do titlo está correto', () => {
+    const correctTitle = "WITW";
+    const title = screen.getByRole('heading', { level: 1 });
+    expect(title).toHaveTextContent('WITW');
+  });
 
   it('o input de nome é visivel', () => {
     const userNameInput = screen.getByRole('textbox');
     expect(userNameInput).toBeVisible;
-    expect(userNameInput).not.toHaveTextContent;
-  })
+  });
 
   it('o input de nome é acessivel', () => {
     const userNameInput = screen.getByRole('textbox');
@@ -36,7 +42,7 @@ describe('Testes da pagina inicial da aplicação', () => {
     fireEvent.change(userNameInput, { target: { value: "Claudio" } })
     expect(userNameInput).toHaveTextContent;
     expect(userNameInput.value).toEqual('Claudio')
-  })
+  });
 
   it('Clicar nos botões altera a dificuldade', () => {
     const dificultButton1 = screen.getByTestId('one-word-button');
